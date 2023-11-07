@@ -3,7 +3,7 @@
 Consume from the topic:
 
 ```bash
-./kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic kafka101
+./kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic kafka101 --timeout-ms 30000
 ```
 
 We expect to see the numbers from 1 to 10 printed, but nothing is returned, let's investigate why.

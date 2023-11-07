@@ -9,9 +9,11 @@ Describe the group:
 
 Reset the consumer group to beginning:
 ```bash
-./kafka-consumer-groups.sh --bootstrap-server localhost:9092 --reset-offsets --topic kafka101 --to-earliest
+./kafka-consumer-groups.sh --bootstrap-server localhost:9092 --reset-offsets --group kafka101 --topic kafka101 --to-earliest --dry-run
+./kafka-consumer-groups.sh --bootstrap-server localhost:9092 --reset-offsets --group kafka101 --topic kafka101 --to-earliest --execute
+```
 
-Consume from the topic should print numbers from 1-100:
+Consume from the topic should print numbers from 1-10:
 ```bash
-./kafka-console-consumer.sh --bootstrap-server localhost:9092 --group kafka101 --topic kafka101 --property print.offset=true
+./kafka-console-consumer.sh --bootstrap-server localhost:9092 --group kafka101 --topic kafka101 --timeout-ms 30000
 ````

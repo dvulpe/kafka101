@@ -2,7 +2,7 @@
 
 Ensure the topic exists:
 ```bash
-./kafka-topics.sh --bootstrap-server localhost:9092 --describe --topic kafka101
+    ./kafka-topics.sh --bootstrap-server localhost:9092 --describe --topic kafka101
 ```
 
 Write the integers from 1-10 to the `kafka101` topic:
